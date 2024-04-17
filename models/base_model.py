@@ -32,10 +32,7 @@ class BaseModel:
         # Format as string
         timestamp_str = now.strftime('%Y%m%d-%H%M%S')
         # Use timestamp in filename
-        if image_number != '':
-            filename = f'image_results/{self.model_name}_{timestamp_str}_{image_number}.png'
-        else:
-            filename = f'image_results/{self.model_name}_{timestamp_str}.png'
+        filename = f'image_results/{self.model_name}_{timestamp_str}'
         return filename
 
     def create_images(self, pipe: DiffusionPipeline|StableDiffusionXLPipeline, *args, **kwargs) -> None:
@@ -49,9 +46,9 @@ class BaseModel:
         images = pipe(*args, **kwargs).images
         if self.num_images == 1:
             filename = self.create_filename()
-            images[0].save(filename)
+            images[0].save(filename+".png")
         else:
+            filename = self.create_filename()
             for i in range(self.num_images):
-                filename = self.create_filename(str(i+1))
-                images[i].save(filename)
+                images[i].save(filename+f"_{i+1}.png")
         
