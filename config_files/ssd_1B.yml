@@ -1,0 +1,15 @@
+# Link to Huggingface model page:
+# https://huggingface.co/segmind/SSD-1B
+
+# prompt for what you want the model to generate
+prompt: "Happy, brown fur husky, cyan eyes, full grown dog, 8k, high resolution" 
+negative_prompt: "Sad, ugly, blurry, poor quality"
+
+# name of the model - See models file for available models
+model: ssd_1B
+
+# low, medium or high
+quality: high 
+
+# Number of images to generate
+num_images: 2

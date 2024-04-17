@@ -12,11 +12,21 @@ class BaseModel:
         self.num_images = int(self.variables['num_images'])
         
     def load_variables(self, yaml_file: str) -> dict[str, any]:
-        with open(yaml_file, 'r') as file:
+        """
+        Load the variables from the yaml file.
+        """
+        with open("config_files/" + yaml_file, 'r') as file:
             variables = yaml.safe_load(file)
         return variables
     
     def create_filename(self, image_number:str = '') -> str:
+        """
+        Create a filename for the output image(s).
+        Args:
+            image_number (str): The number of the image. Used for multiple images. Defaults to ''.
+        Returns:
+            str: The filename.
+        """
         # Get current date and time
         now = datetime.now()
         # Format as string

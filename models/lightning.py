@@ -13,19 +13,20 @@ class Lightning(BaseModel):
         super().__init__(yaml_file)
 
     def run_model(self) -> None:
+        """
+        Run the model and save the output image(s).
+        """
+        # Note: float32 does not work with this model
+        torch_dtype = torch.float16
+        variant = "fp16"
+
         # Set quality metrics
         if self.quality == "high":
             num_inference_steps = 16
-            torch_dtype=torch.float32
-            variant="fp32"
         elif self.quality == "medium":
             num_inference_steps = 8
-            torch_dtype=torch.float16
-            variant="fp16"
         elif self.quality == "low":
             num_inference_steps = 4
-            torch_dtype=torch.float16
-            variant="fp16"
         else:
             raise ValueError("Quality must be 'high', 'medium', or 'low'")    
         
@@ -37,5 +38,5 @@ class Lightning(BaseModel):
         # Ensure sampler uses "trailing" timesteps.
         pipe.scheduler = EulerDiscreteScheduler.from_config(pipe.scheduler.config, timestep_spacing="trailing")
 
-        self.create_images(pipe, num_inference_steps=num_inference_steps, guidance_scale=0, num_images_per_prompt=self.num_images)
+        self.create_images(pipe, prompt=self.prompt, num_inference_steps=num_inference_steps, guidance_scale=0, num_images_per_prompt=self.num_images)
 
