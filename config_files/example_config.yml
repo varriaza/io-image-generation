@@ -1,0 +1,11 @@
+# prompt for what you want the model to generate
+prompt: "This is a test prompt" 
+
+# name of the model - See models file for available models
+model: test 
+
+# low, medium or high
+quality: medium 
+
+# Number of images to generate
+num_images: 1
