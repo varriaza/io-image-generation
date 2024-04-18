@@ -10,5 +10,5 @@ model: dreamshaper
 # low, medium or high
 quality: high 
 
-# Number of images to generate
+# Number of images to generate per run
 num_images: 2

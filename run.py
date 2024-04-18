@@ -30,7 +30,7 @@ def main(yaml_file):
     elif model_name == "lightning":
         model = Lightning(yaml_file)
     elif model_name == "ssd_1b":
-        model = SSD_1B(yaml_file)
+        model = SSD_1b(yaml_file)
     else:
         raise NotImplementedError(f"Model {model_name} not implemented. Please check your spelling. Case does not matter.")
 
