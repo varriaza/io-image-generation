@@ -2,7 +2,7 @@ from diffusers import StableDiffusionXLPipeline
 import torch
 from models.base_model import BaseModel
 
-class SSD_1B(BaseModel):
+class SSD_1b(BaseModel):
     def __init__(self, yaml_file):
         super().__init__(yaml_file)
         self.negative_prompt = self.variables['negative_prompt'].lower()

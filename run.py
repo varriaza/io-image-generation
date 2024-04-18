@@ -1,6 +1,6 @@
 from models.dreamshaper import Dreamshaper
 from models.lightning import Lightning
-from models.ssd_1B import SSD_1B
+from models.ssd_1b import SSD_1b
 import yaml
 import sys
 
