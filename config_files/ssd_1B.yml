@@ -9,7 +9,7 @@ negative_prompt: "Sad, ugly, blurry, poor quality"
 model: ssd_1B
 
 # low, medium or high
-quality: high 
+quality: medium 
 
 # Number of images to generate per run
 num_images: 2

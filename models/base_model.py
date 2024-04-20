@@ -1,6 +1,5 @@
 import yaml
 from datetime import datetime
-from diffusers import DiffusionPipeline, StableDiffusionXLPipeline
 
 
 class BaseModel:
@@ -20,7 +19,7 @@ class BaseModel:
             variables = yaml.safe_load(file)
         return variables
 
-    def create_filename(self, image_number: str = "") -> str:
+    def create_filename(self) -> str:
         """
         Create a filename for the output image(s).
         Args:
@@ -37,7 +36,7 @@ class BaseModel:
         return filename
 
     def create_images(
-        self, pipe: DiffusionPipeline | StableDiffusionXLPipeline, *args, **kwargs
+        self, pipe, *args, **kwargs
     ) -> None:
         """
         Run the model and save the output image(s).

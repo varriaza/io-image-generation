@@ -15,7 +15,10 @@ def load_variables(yaml_file) -> dict[str, any]:
     except FileNotFoundError:
         if yaml_file == "ssd_18.yml":
             raise FileNotFoundError(
-                f"File {yaml_file} not found in config_files/. Please check your spelling! The correct file name uses a 'b' not an '8'.yml"
+                (
+                    f"File {yaml_file} not found in config_files/. "
+                    "Please check your spelling! The correct file name uses a 'b' not an '8'.yml"
+                )
             )
         raise FileNotFoundError(
             f"File {yaml_file} not found in config_files/. Please check your spelling!"
