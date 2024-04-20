@@ -163,4 +163,5 @@ cython_debug/
 image_results/*
 io-image-generation
 io-image-generation/*
+image-generation/*
 todo.md
