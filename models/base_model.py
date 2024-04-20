@@ -35,9 +35,7 @@ class BaseModel:
         filename = f"image_results/{self.model_name}_{timestamp_str}"
         return filename
 
-    def create_images(
-        self, pipe, *args, **kwargs
-    ) -> None:
+    def create_images(self, pipe, *args, **kwargs) -> None:
         """
         Run the model and save the output image(s).
         Args:
