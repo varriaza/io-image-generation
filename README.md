@@ -48,8 +48,7 @@ Access and Setup Your Cluster
 4. Click the hamburger menu at the top left (the three bars), go to "terminal" -> "new terminal"
 5. This will open a linux terminal at the bottom of your screen
     - No need to worry, I will walk you through everything you need to do with it 
-6. Clone the following repo (I need to figure out how to link this without it being an issue)
-    - Provide part of url or ask admin to post link 
+6. Clone the following repo 
     - Run:
         - git clone https://github.com/varriaza/io-image-generation.git
             - This copies the code I made to your cluster 
