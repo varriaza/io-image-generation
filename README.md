@@ -59,7 +59,7 @@ Access and Setup Your Cluster
 9. A menu will open up with the text "/home/ray", add "io-image-generation" so it looks like "/home/ray/io-image-generation" and click the "OK" button
     - If you accidentally forget to add "io-image-generation" you'll see a bunch of other files, you'll just have to ignore those
 10. Your screen will refresh and you will see some files on the left
-11. If you see a message saying "Do you trust the authors of the files in this folder?" click on "Yes, I trust the authors"
+11. If you see a message saying "Do you trust the authors of the files in this folder?" click on either answer. Both will work.
 12. Follow the instructions to open your terminal again (step 4)
 13. If you DID NOT add "io-image-generation" in step 9, in the terminal run: 
     - cd io-image-generation
