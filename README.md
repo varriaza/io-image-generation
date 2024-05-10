@@ -12,36 +12,50 @@ What you will need BEFORE you start
 
 
 Ray Cluster Creation Steps
-1. Create an IO.net Ray cluster    
-2. Hover over the top left and click on "Cloud" from the drop down
-3. Click on the "Deploy" button for a Ray cluster (NOT a Mega-Ray!)
+1. We want to create an IO.net Ray cluster    
+2. Hover over the top left and click on "IO Cloud" from the drop down
+3. Click on the "Deploy" button for a "Ray" cluster (NOT a Mega-Ray!)
 4. You will be taken to a "Create New Cluster" page
 5. For "Cluster type" select "General"
-6. Scroll down to "Supplier" and click IO
-7. For GPU, you have some choices here
+    - Click "Next Step"
+6. For "Supplier" and click "io.net"
+    - Click "Next Step"
+7. For "Security Compliance" select E2E Encrypted, if it isn't already
+    - Click "Next Step"
+8. For "Location", select the country nearest you that is available 
+    - Multiple is ok too
+    - Click "Next Step"
+9. Scroll down to speed and choose Low or Medium
+    - This will only really matter for when the code downloads the models (which can be a few GB)
+    - Click "Next Step"
+10. For GPU, you have some choices here
     - For your first time I would recommend an RTX 3050 (Ti or regular) or RTX 3060 (Ti or regular)
     - If you need more power you can always create a new cluster later. Thats the beauty of IO.net!
-8. For Location, select the country nearest you that is available
-9. Scroll down to speed and choose Low or Medium
-    - This will only really matter for when the code downloads the models (which can be a few GB) or when you want to download your created images
-10. The Cluster name is not important, you can leave it as is
-11. For the Summary we have a few options
+    - Select your GPU preference (only 1 can be chosen)
+    - Note: Cluster deployments require a minimum of 4 gpus, so if there are less than that you'll have to pick a different GPU
+    - Click "Next Step"
+11. For "Cluster Base Image", we want "Ray App" to be selected
+    - Click "Next Step"
+12. For "Master Configuration" just click next step.
+    - This isn't too important
+13. For the Summary we have a few options
     - GPU Quantity
-        - I would recommend 1 for now
+        - Cluster deployments require a minimum of 4 gpus
         - Some GPUs will make you buy multiple at a time which can cause your final price to skyrocket very quickly
-            - If you don't see "1" as an option for your first time I would try a different GPU
+            - If you don't see "4" as an option for your first time I would try a different GPU
+            - To do this, on the right, click on the "Cluster Processor"
     - For duration, I would recommend 1-2 hours
         - That should be plenty of time to install everything and mess around
         - You can always extend this later (or make a new cluster) but if you purchase, for example, 10 hours now, there is no refund for unused time!
-12. Double check the "Cluster Options" match what you want and hit the "Deploy" button right below them
-13. Wait for your cluster to be deployed
+14. Double check the "Cluster Options" match what you want and hit the "Deploy" button right below them
+15. Wait for your cluster to be deployed
     - This can take 3-5 minutes
-    - If the cluster fails to be created (you get a bunch of red "x"s) you'll just have to re-make it from step 3
-14. Once that is done, click "View Cluster"
+    - If the cluster fails to be created (you get a bunch of red "x"s) you'll just have to re-make it from step 2
+16. Once that is done, click "View Cluster"
 
 
 Access and Setup Your Cluster
-1. Click on the "Password" in "Your Dev Environment" to copy it to your clipboard
+1. Click on the "IDE Password" on the top right to copy it to your clipboard
 2. From the cluster page, log into your new cluster by clicking the "Visual Studio" button
     - If you click the button and get a page that says "tunnel not found. create one at tunnels.io.systems", you'll have to create a support ticket.
 3. Paste in the password you copied earlier
